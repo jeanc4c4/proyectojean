@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cotizacion</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body class="cotizacionbackground">
+     <header>
+       <div class="logoinicial">
+        <img src="imagen/logoprintidea.jpg" alt="Imagen de logo"></div> 
+        <div>
+            <input type="checkbox" id="btn-menu">
+            <label for="btn-menu">
+            <img src="imagen/menuopcional.png" alt="menu" width="45">
+            </label>
+            <nav class="menu">
+             <ul>
+              <li><a href="index.html">Inicio</a></li>
+              <li><a href="trabajos.html">Trabajos</a></li>
+              <li><a href="contactenos.html">Contactenos</a></li>
+              <li><a href="quienessomos.html">¿Quienes Somos?</a></li>
+          </ul>
+        </nav>
+        </div>     
+    </header> 
+    <main class="cotizacionestilo">
+         <section class="cotizacionseccion">
+   <h1>Formulario de Cotización - Impresión 3D</h1>
+   <p>Haz realidad tu Idea</p>
+ <div class="cotizacionid">
+     <div class="id">
+       <label for="nombre">Nombre completo:</label>
+       
+       <input type="text" id="nombre" name="nombre" >
+     </div>
+     <div class="id">
+      <label for="correo">Correo electrónico:</label>
+
+      <input type="email" id="correo" name="correo">
+     </div>
+     <div class="id">
+      <label for="telefono">Teléfono de contacto:</label>
+      
+      <input type="tel" id="telefono" name="telefono">
+     </div>  
+   </div>
+    
+  <br><br>
+
+  <div class="tipologia">
+    <div class="estilocotizacion">
+     <label for="material">Material deseado:</label>
+     <select id="material" name="material">
+     <option value="">Seleccione un material</option>
+     <option value="PLA">PLA</option>
+     <option value="ABS">ABS</option>
+     <option value="PETG">PETG</option>
+     <option value="Resina">Resina</option>
+     </select>
+
+    </div>
+    <div class="estilocotizacion">
+     <label for="color">Color preferido:</label>
+     <input type="text" id="color" name="color">
+    </div>
+  </div>
+
+  <br><br>
+ 
+
+  <p>Dimensiones del modelo (en mm):</p>
+  <br>
+  <label for="largo">Largo: </label>
+  <input type="number" id="largo" name="largo">
+
+  <label for="ancho">Ancho: </label>
+  <input type="number" id="ancho" name="ancho">
+
+  <label for="alto">Alto: </label>
+  <input type="number" id="alto" name="alto">
+  <br><br>
+
+  <label for="archivo">Subir archivo 3D (STL, OBJ, etc.):</label><br>
+  <input type="file" id="archivo" name="archivo" accept=".stl,.obj"><br><br>
+
+  <label for="comentarios">Comentarios adicionales:</label><br>
+  <textarea id="comentarios" name="comentarios" rows="4" cols="40"></textarea><br><br>
+
+  <input type="submit" value="Enviar Cotización">
+</section>
+</main>
+     <footer>
+        <div class="footerinicio">
+            <div>
+             <p><strong>Tambien nos puedes hallar en nuestras redes sociales</strong></p>
+            </div>
+            <div>
+            <a href="https://www.facebook.com/" target="_blank"> <img src="imagen/logos_redes/facebooklogo.png" alt="Facebook" width="50" height="50"></a>
+           </div>
+           <div>
+            <a href="https://x.com/?lang=es" target="_blank"><img src="imagen/logos_redes/twitter.webp" alt="twitter" width="80" height="50"></a>
+           </div>
+           <div>
+            <a href="https://www.instagram.com/" target="_blank"><img src="imagen/logos_redes/Instagramlogo.webp" alt="instagram" width="50" height="50"></a>
+           </div>
+           <div>
+            <a href="https://www.tiktok.com/es-419/" target="_blank"><img src="Imagen/logos_redes/tiktok.png" alt="tictok" width="50" height="50"></a>
+           </div>
+        </div>
+     </footer>
+        
+</body>
+</html>

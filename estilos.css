@@ -1,0 +1,492 @@
+/*header de menu de las paginas*/
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: rgb(26, 156, 128);
+}
+
+.logoinicial > img {
+    width: 100px;
+    height: auto;
+}
+
+header label {
+    display: none;
+    padding: 10px;
+}
+
+#btn-menu {
+    display: none;
+}
+
+.menu ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+.menu li {
+    border-right: 1px solid #fff;
+    text-align: center;
+    flex-grow: 2;
+}
+
+.menu li:last-child {
+    border-right: none;
+}
+
+.menu li a {
+    display: block;
+    color: #fff;
+    padding: 15px 20px;
+    text-decoration: none;
+}
+
+.menu li:hover {
+    background: gray;
+}
+@media (max-width: 768px) {
+    header label {
+        display: block;
+        cursor: pointer;
+    }
+
+    .menu {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background: #4E94AB;
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+        z-index: 999;
+    }
+
+    .menu ul {
+        flex-direction: column;
+    }
+
+    #btn-menu:checked ~ .menu {
+        max-height: 300px; /* o más si hay muchos elementos */
+    }
+
+    .menu li {
+        border-top: 1px solid #fff;
+        border-right: none;
+    }
+}
+/*Pagina Inicio*/
+#iniciobackgruond{
+     background-color: beige;    
+}
+.contedorinicio{
+    background-image: url(imagen/fondoinicio-main.gif);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
+}
+#section2inicio{
+    background-color: beige;
+    justify-content: center;
+    align-items: center;
+}
+#section2inicio .contenido-seccion2 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+#section2inicio .imagen {
+  flex: 1 1 300px;
+  max-width: 500px;
+}
+
+#section2inicio .imagen img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+#section2inicio .texto {
+  flex: 2 1 400px;
+  text-align: justify;
+ font-size:large;
+}
+
+@media (max-width: 768px) {
+  #section2inicio .contenido-seccion2 {
+    flex-direction: column;
+  }
+
+  #section2inicio .imagen,
+  #section2inicio .texto {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}
+.texto{
+    justify-content: center;
+    align-items: center;
+}
+.tablam {
+    display: none;
+    margin: 10px 0;
+    overflow-x: auto;
+}
+
+#mostrarmateriales:checked + label + .tablam {
+    display: block;
+    
+}
+
+.boton {
+    cursor: pointer;
+    border-radius: 5%;
+    display: inline-block;
+    background-color: #a4b16c;
+    font-size: 25px;
+    font-weight: 700;
+    padding: 20px;
+    text-align: center;
+    margin: 20px auto;
+    width: fit-content;
+    
+}
+
+table {
+    font-family: sans-serif;
+    border: 10px solid rgb(126, 123, 103);
+    border-radius: 7%;
+    border-collapse: collapse;
+    text-align: center;
+    margin: 0 auto;
+    min-width: 600px;
+}
+
+th, td {
+    border: 2px double rgb(126, 123, 103);
+    padding: 5px;
+    font-size: 20px;
+}
+
+#materiaprima {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+#materiaprima div p {
+    font-size: 30px;
+    text-align: justify;
+}
+@media (max-width: 768px) {
+    .tablam {
+        overflow-x: auto;
+    }
+
+    table {
+        width: 100%;
+        min-width: 600px;
+    }
+
+    .boton {
+        font-size: 20px;
+        padding: 15px;
+    }
+
+    #materiaprima div p {
+        font-size: 18px;
+    }
+}
+#cotizacion{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-image: url(imagen/backgrond-cotizacion.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#cotizacion img {
+  max-width: 100%;
+  height: auto;
+}
+
+.botoncotizacion a {
+  display: inline-block;
+  background-color: rgba(8, 8, 8, 0.4);
+  color: white;
+  font-weight: bold;
+  padding: 15px 25px;
+  text-decoration: none;
+  border-radius: 10px;
+  font-size: 45px;
+  margin-right: 2%;
+}
+.botoncotizacion a:hover {
+  transform: scale(1.05);
+}
+@media (max-width: 768px) {
+  #cotizacion {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .botoncotizacion a {
+    font-size: 16px;
+    padding: 12px 20px;
+  }
+}
+.contenedormultimedia {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  gap: 20px;
+  background-color:beige; 
+}
+
+.contenedormultimedia .imagen {
+  flex: 0 0 15%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contenedormultimedia .imagen img {
+  height: 100%;             
+  max-height: 200px;         
+  width: auto;
+  object-fit: contain;
+}
+
+.contenedormultimedia .video {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+}
+
+.contenedormultimedia .video video {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+}
+.footerinicio{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+}
+.footerinicio div p{
+    margin-right: 5%;
+}
+/*Pagina Cotizacion*/
+.cotizacionbackground{
+    background-color: beige;
+}
+.cotizacionestilo{
+    text-align: center;
+    background-image: url(imagen/fondo-body.jpg);
+    background-position: center;
+    background-size: cover;
+    color: #fff;
+    font-size: 25px;
+}
+/*Pagina contactenos*/
+.redescontato{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+#asesor1contactenos p,h2{
+    margin-left: 5%;
+    color: #fff;
+}
+#asesor2contactenos p{
+    margin-left: 5%;
+    color:#f8f3f3;
+}
+#Gerenciacontactenos p{
+    margin-left: 5%;
+    color: #fff;
+}
+.Directorio{
+    color: rgb(221, 213, 199);
+    text-align: center;    
+    font-size: 300%;
+}
+.ayudaW{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.ayudaW a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    
+}
+#redesima{
+    text-align: center;
+}
+#redesima p{
+    margin-right: 2%;
+}
+#footercontacto{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+#copynrigth{
+    text-align:right;
+}
+.contactodiseño{
+    background-image: url(imagen/backgrond-contactenos.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
+}
+.botcot a{
+    background-color: #50ca9c;
+    color: #0d1110;
+    padding: 25px;
+    display: inline-block;
+    font-size: 25px;
+}
+.bodycont{
+    background-color: beige;
+}
+.lol p{
+    color: #0d1110;
+}
+/*Pagina quienes somos*/
+.quienessomos {
+  background-color: beige;
+  padding: 40px 5%;
+}
+
+.quienessomos h1 {
+  margin-bottom: 40px;
+  font-size: 2em;
+  color: #333;
+}
+
+.bloque {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+.bloque .imagen {
+  flex: 1 1 40%;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+.bloque .imagen img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.bloque .texto {
+  flex: 1 1 60%;
+  padding: 20px;
+}
+
+.bloque .texto p {
+  font-size: 1.1em;
+  text-align: justify;
+  line-height: 1.6;
+  color: #222;
+}
+
+@media (max-width: 768px) {
+  .bloque {
+    flex-direction: column;
+  }
+
+  .bloque .texto {
+    padding: 10px 0;
+  }
+
+  .bloque .imagen,
+  .bloque .texto {
+    flex: 1 1 100%;
+  }
+}
+/*Pagina tarbajos*/
+#trabajossec {
+  background-color:beige;
+  padding: 40px 5%;
+}
+
+#trabajossec h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2em;
+  color: #333;
+}
+
+.trabajos {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.trabajo figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: justify;
+  gap: 20px;
+}
+
+.trabajo img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+.descripcion {
+  font-size: 1.1em;
+  color: #444;
+  max-width: 800px;
+}
+
+@media (min-width: 768px) {
+  .trabajo figure {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .trabajo img {
+    width: 300px;
+    height: auto;
+  }
+
+  .descripcion {
+    margin-left: 20px;
+  }
+}
